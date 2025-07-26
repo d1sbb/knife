@@ -29,7 +29,7 @@ public class InsertXSSMenu extends JMenuItem {
 	public InsertXSSMenu(BurpExtender burp){
 		if (burp.invocation.getInvocationContext() == IContextMenuInvocation.CONTEXT_MESSAGE_EDITOR_REQUEST) {
 			if (burp.tableModel.getConfigValueByKey("XSS-Payload")!=null){
-				this.setText("^_^ Insert XSS");
+				this.setText("[插入 XSS]");
 				this.addActionListener(new InsertXSSAction(burp,burp.invocation));
 			}
 		}

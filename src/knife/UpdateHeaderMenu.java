@@ -41,7 +41,7 @@ public class UpdateHeaderMenu extends JMenu {
 				List<String> pHeaders = possibleHeaderNames(invocation);//HeaderNames without case change
 				/*menu_list.add(uhmenu);*/
 				if(!pHeaders.isEmpty()) {
-					this.setText("^_^ Update Header");
+					this.setText("[更新Header]");
 					for (String pheader:pHeaders) {
 						JMenuItem headerItem = new JMenuItem(pheader);
 						headerItem.addActionListener(new UpdateHeader_Action(burp,invocation,pheader));

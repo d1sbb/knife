@@ -30,7 +30,7 @@ public class CopyJsOfThisSite extends JMenuItem {
 
 	//JMenuItem vs. JMenu
 	public CopyJsOfThisSite(BurpExtender burp){
-		this.setText("^_^ Copy JS Of This Site");
+		this.setText("[复制这个网站的JS](需开siteMap)");
 		this.addActionListener(new CopyJsOfThisSite_Action(burp,burp.invocation));
 	}
 
@@ -108,10 +108,15 @@ class CopyJsOfThisSite_Action implements ActionListener{
 					int code = getter.getStatusCode(item);
 					URL url = getter.getFullURL(item);
 					String referUrl = getter.getHeaderValueOf(true,item,"Referer");
-					if (referUrl == null ||  url== null || code <=0) {
+					if (referUrl == null) {//如果没有referer，就用url
+						referUrl = url.toString();
+					}
+					if (url== null || code <=0) {
 						continue;
 					}
-					if (!url.toString().toLowerCase().endsWith(".js") || !url.toString().toLowerCase().endsWith(".js.map")) {
+
+					String urlStr = url.toString().toLowerCase();
+					if (!urlStr.endsWith(".js") && !urlStr.endsWith(".js.map")) {
 						continue;
 					}
 

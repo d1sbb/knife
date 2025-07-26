@@ -15,7 +15,7 @@ import burp.IHttpRequestResponse;
 public class DoActiveScanMenu extends JMenuItem {//JMenuItem vs. JMenu
 
 	public DoActiveScanMenu(BurpExtender burp){
-		this.setText("^_^ Do Active Scan");
+		this.setText("[Do Active Scan]");
 		this.addActionListener(new DoActiveScan_Action(burp,burp.invocation));
 	}
 }

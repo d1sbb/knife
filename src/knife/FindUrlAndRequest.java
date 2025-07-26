@@ -15,7 +15,7 @@ public class FindUrlAndRequest extends JMenuItem {
 
 	//JMenuItem vs. JMenu
 	public FindUrlAndRequest(BurpExtender burp) {
-		this.setText("^_^ Find URL And Request");
+		this.setText("[批量查找URL并请求]");
 		this.addActionListener(new FindUrlAction(burp, burp.invocation));
 	}
 

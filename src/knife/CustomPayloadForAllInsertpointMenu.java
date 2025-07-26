@@ -41,7 +41,7 @@ public class CustomPayloadForAllInsertpointMenu extends JMenu {
 
 	public CustomPayloadForAllInsertpointMenu(BurpExtender burp){
 		try {
-			this.setText("^_^ Insert Payload For All");
+			this.setText("[插入Payload到多个参数值]");
 			this.burp = burp;
 
 			List<ConfigEntry> configs = GUI.getConfigTableModel().getConfigByType(ConfigEntry.Config_Custom_Payload);

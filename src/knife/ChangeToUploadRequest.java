@@ -24,7 +24,7 @@ public class ChangeToUploadRequest extends JMenuItem {
 
 	public ChangeToUploadRequest(BurpExtender burp){
 		try {
-			this.setText("^_^ Change To Upload Request");
+			this.setText("[改为上传请求]");
 			this.addActionListener(new ChangeToUploadRequestListener(burp));
 		} catch (Exception e) {
 			e.printStackTrace(BurpExtender.getStderr());
@@ -54,10 +54,10 @@ class ChangeToUploadRequestListener implements ActionListener {
 		newRequestBytes = getter.addOrUpdateHeader(true, newRequestBytes, "Content-Type", "multipart/form-data; boundary="+boundary);
 
 		String body = boundary+"\r\n"
-				+ "Content-Disposition: form-data; name=\"uploadImage\"; filename=\"phpinfo.png\"\r\n"
+				+ "Content-Disposition: form-data; name=\"uploadImage\"; filename=\"hello.png\"\r\n"
 				+ "Content-Type: image/png\r\n"
 				+ "\r\n"
-				+ "<?php phpinfo();?>\r\n"
+				+ "<%= \"hello\" %>\r\n"
 				+ boundary;
 		newRequestBytes = getter.UpdateBody(true, newRequestBytes, body.getBytes());
 

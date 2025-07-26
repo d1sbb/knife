@@ -16,7 +16,7 @@ import config.ProcessManager;
 public class DismissCancelMenu extends JMenuItem {//JMenuItem vs. JMenu
 
 	public DismissCancelMenu(BurpExtender burp){
-		this.setText("^_^ Dismiss Cancle");
+		this.setText("[无用请求包消失 Cancle]");
 		this.addActionListener(new Dismiss_Cancel_Action(burp,burp.invocation));
 	}
 }

@@ -18,7 +18,7 @@ public class UpdateCookieMenu extends JMenuItem {
 	public UpdateCookieMenu(BurpExtender burp){
 		if (burp.invocation.getInvocationContext() == IContextMenuInvocation.CONTEXT_MESSAGE_EDITOR_REQUEST
 			|| burp.invocation.getInvocationContext() == IContextMenuInvocation.CONTEXT_INTRUDER_PAYLOAD_POSITIONS) {
-			this.setText("^_^ Update Cookie");
+			this.setText("[更新Cookie]");
 			this.addActionListener(new UpdateCookieAction(burp,burp.invocation));
 		}
 	}

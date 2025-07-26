@@ -21,7 +21,7 @@ public class DismissAutoDropMenu extends JMenu {//JMenuItem vs. JMenu
 	public DismissAutoDropMenu(BurpExtender burp){
 		String dismissed  = burp.tableModel.getConfigValueByKey("DismissedAutoDrop");
 		if (dismissed != null) {
-			this.setText("^_^ Dismissed (Auto Drop)");
+			this.setText("[无用请求包消失 (Auto Drop)]");
 			
 			JMenuItem item = new JMenuItem("Selected Host");
 			item.addActionListener(new Dismiss_Action_Auto_Drop(burp,burp.invocation));

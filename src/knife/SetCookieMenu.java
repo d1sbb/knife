@@ -20,7 +20,7 @@ public class SetCookieMenu extends JMenuItem {
 	private static final long serialVersionUID = 1L;
 
 	public SetCookieMenu(BurpExtender burp){
-		this.setText("^_^ Set Cookie");
+		this.setText("[设置全局Cookie]");
 		this.addActionListener(new SetCookie_Action(burp,burp.invocation));
 	}
 }

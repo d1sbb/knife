@@ -22,7 +22,7 @@ import config.ProcessManager;
 public class DismissMenu extends JMenuItem {//JMenuItem vs. JMenu
 
 	public DismissMenu(BurpExtender burp){
-		this.setText("^_^ Dismiss");
+		this.setText("[无用请求包消失]");
 		this.addActionListener(new Dismiss_Action(burp,burp.invocation));
 	}
 }

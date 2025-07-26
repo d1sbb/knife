@@ -32,7 +32,7 @@ public class RunSQLMapMenu extends JMenuItem {
 
 	//JMenuItem vs. JMenu
 	public RunSQLMapMenu(BurpExtender burp){
-		this.setText("^_^ Run SQLMap");
+		this.setText("[执行SQLMap]");
 		this.addActionListener(new RunSQLMap_Action(burp,burp.invocation));
 	}
 }

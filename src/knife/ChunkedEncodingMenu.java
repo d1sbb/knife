@@ -37,9 +37,9 @@ public class ChunkedEncodingMenu extends JMenuItem {
 			}
 			String chunked = getter.getHeaderValueOf(true, messages[0], "Transfer-Encoding");
 			if (chunked == null || !chunked.equalsIgnoreCase("chunked") ) {
-				this.setText("^_^ Chunked Encoding");
+				this.setText("[Chunked Encoding]");
 			}else {
-				this.setText("^_^ Chunked Decoding");
+				this.setText("[Chunked Decoding]");
 			}
 			this.addActionListener(new ChunkedEncoding_Action(burp,invocation));
 		} catch (Exception e) {
@@ -76,7 +76,7 @@ class ChunkedEncoding_Action implements ActionListener{
     	List<String> headers = getter.getHeaderList(true, messageInfo);
     	byte[] body = getter.getBody(true, messageInfo);
     	
-    	if (event.getActionCommand().equals("^_^ Chunked Encoding")) {
+    	if (event.getActionCommand().equals("[Chunked Encoding]")) {
             Iterator<String> iter = headers.iterator();
             while (iter.hasNext()) {
                 if (((String)iter.next()).contains("Transfer-Encoding")) {
@@ -100,7 +100,7 @@ class ChunkedEncoding_Action implements ActionListener{
     			// TODO Auto-generated catch block
     			e.printStackTrace();
     		}
-    	}else if (event.getActionCommand().equals("^_^ Chunked Decoding")) {
+    	}else if (event.getActionCommand().equals("[Chunked Decoding]")) {
             Iterator<String> iter = headers.iterator();
             while (iter.hasNext()) {
                 if (((String)iter.next()).contains("Transfer-Encoding")) {

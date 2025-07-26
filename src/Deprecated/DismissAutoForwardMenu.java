@@ -21,7 +21,7 @@ public class DismissAutoForwardMenu extends JMenu {//JMenuItem vs. JMenu
 	public DismissAutoForwardMenu(BurpExtender burp){
 		String dismissed  = burp.tableModel.getConfigValueByKey("DismissedAutoForward");
 		if (dismissed != null) {
-			this.setText("^_^ Dismissed This Url");
+			this.setText("[无用请求包消失 This Url]");
 			
 			JMenuItem item = new JMenuItem("Selected Host");
 			item.addActionListener(new Dismiss_Auto_Forward_Action(burp,burp.invocation));

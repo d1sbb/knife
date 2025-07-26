@@ -32,7 +32,7 @@ public class DownloadResponseMenu2 extends JMenuItem {
 
 	//JMenuItem vs. JMenu
 	public DownloadResponseMenu2(BurpExtender burp){
-		this.setText("^_^ save Request And Response");
+		this.setText("[save Request And Response]");
 		this.addActionListener(new Download_Action2(burp,burp.invocation));
 	}
 }

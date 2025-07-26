@@ -145,7 +145,7 @@ public class CookieFinder {
      * @return
      */
     public static String getLatestCookieFromUserInput() {
-        String domainOrCookie = Methods.prompt_and_validate_input("Cookie Value OR URL That Cookie From ", null);
+        String domainOrCookie = Methods.prompt_and_validate_input("使整个网站的后续请求都带上这些cookie，1.直接输出cookie值 2.输入域名，根据域名查找历史记录中的cookie值", null);
         String url1 = "";
         String url2 = "";
         try {

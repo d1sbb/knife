@@ -22,7 +22,7 @@ public class SetCookieWithHistoryMenu extends JMenuItem {
 		try {
 			String cookieToSetHistory = ProcessManager.getUsedCookieOfUpdate();
 			if (cookieToSetHistory != null) {
-				this.setText(String.format("^_^ Set Cookie (%s)", ProcessManager.fetchUsedCookieAsTips()));
+				this.setText(String.format("[设置全局Cookie] (%s)", ProcessManager.fetchUsedCookieAsTips()));
 				this.addActionListener(new SetCookieWithHistory_Action(burp,burp.invocation));
 			}
 		} catch (Exception e) {

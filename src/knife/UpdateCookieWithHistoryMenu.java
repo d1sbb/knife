@@ -22,7 +22,7 @@ public class UpdateCookieWithHistoryMenu extends JMenuItem {
 					|| burp.invocation.getInvocationContext() == IContextMenuInvocation.CONTEXT_INTRUDER_PAYLOAD_POSITIONS) {
 				String usedCookie = ProcessManager.getUsedCookieOfUpdate();
 				if (usedCookie != null) {
-					this.setText("^_^ Update Cookie ("+ ProcessManager.fetchUsedCookieAsTips()+")");
+					this.setText("[更新Cookie] ("+ ProcessManager.fetchUsedCookieAsTips()+")");
 					this.addActionListener(new UpdateCookieWithHistory_Action(burp,burp.invocation,usedCookie));
 				}
 			}

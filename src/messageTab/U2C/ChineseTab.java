@@ -69,6 +69,9 @@ public class ChineseTab implements IMessageEditorTab {
 		if (StringUtils.isEmpty(contentType)) {
 			return true;
 		}
+//		if (content.length > 102400) {//超过100KB，跳过处理
+//			return false;
+//		}
 		if (contentType.contains("image/")) {
 			return false;
 		}

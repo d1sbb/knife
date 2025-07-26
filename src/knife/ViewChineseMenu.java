@@ -21,7 +21,7 @@ public class ViewChineseMenu extends JMenuItem {
 
 	//JMenuItem vs. JMenu
 	public ViewChineseMenu(BurpExtender burp){
-		this.setText("^_^ View Chinese");
+		this.setText("[View Chinese]");
 		this.addActionListener(new View_Action(burp,burp.invocation));
 	}
 }
