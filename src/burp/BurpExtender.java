@@ -125,7 +125,7 @@ public class BurpExtender extends GUI implements IBurpExtender, IContextMenuFact
 
     //name+version+author
     public static String getFullExtensionName() {
-        return ExtensionName + " " + Version + " " + Author;
+        return "A" + ExtensionName + " " + Version ;//+ " " + Author
     }
 
     //JMenu 是可以有下级菜单的，而JMenuItem是不能有下级菜单的
@@ -139,10 +139,12 @@ public class BurpExtender extends GUI implements IBurpExtender, IContextMenuFact
         menu_item_list.add(new CustomPayloadMenu(this));
         menu_item_list.add(new CustomPayloadForAllInsertpointMenu(this));
 
+        menu_item_list.add(new RunCmdMenu(this));
+        menu_item_list.add(new ChangeToUploadRequest(this));
+        menu_item_list.add(new ChunkedEncodingMenu(this));
         //cookie身份凭证相关
         menu_item_list.add(new UpdateCookieMenu(this));
         menu_item_list.add(new UpdateCookieWithHistoryMenu(this));
-        menu_item_list.add(new ChangeToUploadRequest(this));
 
         menu_item_list.add(new SetCookieMenu(this));
         menu_item_list.add(new SetCookieWithHistoryMenu(this));
@@ -154,15 +156,12 @@ public class BurpExtender extends GUI implements IBurpExtender, IContextMenuFact
 
         //扫描攻击相关
         menu_item_list.add(new AddHostToScopeMenu(this));
-        menu_item_list.add(new RunCmdMenu(this));
         menu_item_list.add(new DoActiveScanMenu(this));
-
 
         //不太常用的
         menu_item_list.add(new DismissMenu(this));
         menu_item_list.add(new DismissCancelMenu(this));
 
-        menu_item_list.add(new ChunkedEncodingMenu(this));
         menu_item_list.add(new DownloadResponseMenu(this));
         //menu_item_list.add(new DownloadResponseMenu2(this));
         //menu_item_list.add(new ViewChineseMenu(this));

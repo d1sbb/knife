@@ -26,7 +26,7 @@ public class CustomPayloadMenu extends JMenu {
 
     public CustomPayloadMenu(BurpExtender burp) {
         try {
-            this.setText("[插入 Payload]");
+            this.setText("[插入Payload]");
             this.myburp = burp;
 
             List<ConfigEntry> configs = GUI.getConfigTableModel().getConfigByType(ConfigEntry.Config_Custom_Payload);
